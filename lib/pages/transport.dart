@@ -119,16 +119,18 @@ class Transport extends StatelessWidget {
             StaggeredGrid(),
             Padding(
               padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
-              child: FlatButton(
-                onPressed: () => {launch(transport["websiteUrl"])},
+              child: Container(
                 height: 50.0,
-                color: ghanaMain,
-                child: Center(
-                  child: Text("Visit Website",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w400,
-                          fontSize: 20)),
+                child: FlatButton(
+                  onPressed: () => {launch(transport["websiteUrl"])},
+                  color: ghanaMain,
+                  child: Center(
+                    child: Text("Visit Website",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 20)),
+                  ),
                 ),
               ),
             ),

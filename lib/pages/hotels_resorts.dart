@@ -227,17 +227,19 @@ class _HotelResortState extends State<HotelResort> {
                     ? Container()
                     : Padding(
                         padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
-                        child: FlatButton(
-                          onPressed: () =>
-                              {launch(widget.hotelData["websiteUrl"])},
+                        child: Container(
                           height: 50.0,
-                          color: ghanaMain,
-                          child: Center(
-                            child: Text("Visit Website",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 20)),
+                          child: FlatButton(
+                            onPressed: () =>
+                                {launch(widget.hotelData["websiteUrl"])},
+                            color: ghanaMain,
+                            child: Center(
+                              child: Text("Visit Website",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 20)),
+                            ),
                           ),
                         ),
                       ),

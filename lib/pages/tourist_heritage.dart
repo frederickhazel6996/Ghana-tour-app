@@ -177,16 +177,18 @@ class _TouristHeritageState extends State<TouristHeritage> {
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
-                  child: FlatButton(
-                    onPressed: () => {launch(touristData["websiteUrl"])},
+                  child: Container(
                     height: 50.0,
-                    color: ghanaMain,
-                    child: Center(
-                      child: Text("Save Location",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w400,
-                              fontSize: 20)),
+                    child: FlatButton(
+                      onPressed: () => {launch(touristData["websiteUrl"])},
+                      color: ghanaMain,
+                      child: Center(
+                        child: Text("Save Location",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 20)),
+                      ),
                     ),
                   ),
                 ),
