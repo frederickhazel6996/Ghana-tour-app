@@ -10,8 +10,7 @@ void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       theme:
           ThemeData(fontFamily: "Quicksand", primaryColor: Colors.green[500]),
-      home: Akwaaba(),
-      initialRoute: "/",
+      home: Home(),
       onGenerateRoute: RouteGenerator.generatorRoute,
     ));
 // Future<void> main() async {

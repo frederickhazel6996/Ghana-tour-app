@@ -35,8 +35,7 @@ class RouteGenerator {
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(builder: (_) => Home());
-      case '/home':
-        return MaterialPageRoute(builder: (_) => Home());
+
       case '/map':
         return MaterialPageRoute(builder: (_) => GhanaMap());
       case '/alltransport':
