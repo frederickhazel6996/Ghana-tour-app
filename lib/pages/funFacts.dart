@@ -34,6 +34,7 @@ class FunFacts extends StatelessWidget {
               ),
               ListView.builder(
                 itemCount: HelpResource.funFacts.length,
+                physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemBuilder: (BuildContext context, int index) {
                   return Padding(
@@ -43,33 +44,19 @@ class FunFacts extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Text(HelpResource.funFacts[index]["name"],
-                              style: TextStyle(
-                                  color: ghanaMain,
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 24)),
-                          SizedBox(
-                            height: 10,
-                          ),
                           Container(
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
                                 color: Colors.grey[200]),
-                            child: ListView.builder(
-                              itemCount:
-                                  HelpResource.funFacts[index]["info"].length,
-                              shrinkWrap: true,
-                              itemBuilder: (BuildContext context, int indexs) {
-                                return Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical: 8, horizontal: 15),
-                                  child: Container(
-                                    child: Text(HelpResource.funFacts[index]
-                                        ["info"][indexs]),
-                                  ),
-                                );
-                              },
-                            ),
+                            padding: EdgeInsets.all(20),
+                            child: Text(HelpResource.funFacts[index],
+                                style: TextStyle(
+                                    color: ghanaMain,
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 18)),
+                          ),
+                          SizedBox(
+                            height: 10,
                           ),
                         ],
                       ),
